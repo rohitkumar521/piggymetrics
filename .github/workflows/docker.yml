@@ -24,10 +24,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-       -name: docker build gateway
-        run: |
-        docker build ./gateway sqshq/piggymetrics-gateway
-      - name: docker build auth-service
-        run: |
-        docker build ./auth-service sqshq/piggymetrics-auth-service
+    -name: docker build config
+     run: |
+      docker build config 
+   -name: docker build registry
+     run: |
+      docker build registry
+    -name: docker build auth-service
+     run: |
+       docker build auth-service
+    -name: docker auth-mongodb
+     run: |
+       docker build auth-mongodb
       
