@@ -26,5 +26,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: docker build rabbitmq
         run: |
-          docker build ./rabbitmq rabbitmq:3-management
+          docker build rabbitmq:3-management
  
